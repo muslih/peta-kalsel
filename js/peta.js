@@ -49,7 +49,7 @@ daerah.push(rantau)
 
 // banjarbaru
 var banjarbaru = rsr.path("m 182.2726,777.34149 -8.70324,-2.08448 -23.58176,4.53755 19.73186,-45.07015 19.77442,8.83988 26.11297,3.67959 7.82941,6.04367 6.78722,25.1216 -4.50576,6.533 -5.98645,1.32817 -1.04226,2.73907 -3.30464,-0.56559 -3.57787,4.37863 -3.84478,-5.21114 -9.89487,-3.20934 -1.08036,-4.385 -14.71389,-2.67546").attr({id: 'path152',parent: 'layer1',"font-size": '54.16669845999999922px',"font-style": 'normal',"font-weight": '400',fill: '#fefee9',"fill-opacity": '1',"fill-rule": 'evenodd',stroke: '#000000',"stroke-width": '1',"stroke-linecap": 'square',"stroke-linejoin": 'bevel',"stroke-opacity": '1',"font-family": 'Lucida Grande',"stroke-miterlimit": '4',"stroke-dasharray": 'none'}).transform("t0,-62.362183")
-	.data({'id':'rantau','daerah':'Banjarbaru','kabupaten':'Banjarbaru'});
+	.data({'id':'banjarbaru','daerah':'Banjarbaru','kabupaten':'Banjarbaru'});
 daerah.push(banjarbaru)
 
 // kandangan
@@ -63,7 +63,8 @@ var amuntai = rsr.path("m 350.03547,468.03861 1.84298,4.68877 -12.36057,10.70765
 daerah.push(amuntai)
 
 // barabai
-var barabai = rsr.path("m 357.3184,476.15403 2.43399,6.8603 2.55472,0.82233 3.74313,-1.3803 5.61156,-11.26691 6.62195,0.35145 7.70869,-3.04217 15.15045,5.66491 5.71957,7.4316 18.89999,9.41248 6.08815,10.80616 20.74926,3.28239 -0.6355,6.89778 14.55309,8.75283 -5.83396,7.95463 0.35591,7.13737 -4.5566,4.20388 -10.28886,2.4594 -10.55576,-1.20109 -7.42907,2.74347 -6.0055,-3.30144 -10.0156,5.47806 -12.74824,-2.767 -17.01251,19.85323 -2.03998,-1.965 -5.5289,2.05143 -17.90223,0.27008 -1.55697,-3.24678 -12.31613,-6.60487 -0.29234,-2.45813 -6.65372,0.77725 -4.09905,-5.80663 -10.35875,-5.61915 -8.85257,-18.28606 -4.52481,-2.92714 -4.53754,1.16171 -3.92744,-8.10398 1.91925,-17.91365 23.32946,-2.97163 14.43234,-8.22981 12.36057,-10.70765 3.89569,0.3025 1.54426,3.12415").attr({id: 'path166',parent: 'layer1',"font-size": '54.16669845999999922px',"font-style": 'normal',"font-weight": '400',fill: '#fefee9',"fill-opacity": '1',"fill-rule": 'evenodd',stroke: '#000000',"stroke-width": '1',"stroke-linecap": 'square',"stroke-linejoin": 'bevel',"stroke-opacity": '1',"font-family": 'Lucida Grande',"stroke-miterlimit": '4',"stroke-dasharray": 'none'}).transform("t0,-62.362183").data('id', 'path166');
+var barabai = rsr.path("m 357.3184,476.15403 2.43399,6.8603 2.55472,0.82233 3.74313,-1.3803 5.61156,-11.26691 6.62195,0.35145 7.70869,-3.04217 15.15045,5.66491 5.71957,7.4316 18.89999,9.41248 6.08815,10.80616 20.74926,3.28239 -0.6355,6.89778 14.55309,8.75283 -5.83396,7.95463 0.35591,7.13737 -4.5566,4.20388 -10.28886,2.4594 -10.55576,-1.20109 -7.42907,2.74347 -6.0055,-3.30144 -10.0156,5.47806 -12.74824,-2.767 -17.01251,19.85323 -2.03998,-1.965 -5.5289,2.05143 -17.90223,0.27008 -1.55697,-3.24678 -12.31613,-6.60487 -0.29234,-2.45813 -6.65372,0.77725 -4.09905,-5.80663 -10.35875,-5.61915 -8.85257,-18.28606 -4.52481,-2.92714 -4.53754,1.16171 -3.92744,-8.10398 1.91925,-17.91365 23.32946,-2.97163 14.43234,-8.22981 12.36057,-10.70765 3.89569,0.3025 1.54426,3.12415").attr({id: 'path166',parent: 'layer1',"font-size": '54.16669845999999922px',"font-style": 'normal',"font-weight": '400',fill: '#fefee9',"fill-opacity": '1',"fill-rule": 'evenodd',stroke: '#000000',"stroke-width": '1',"stroke-linecap": 'square',"stroke-linejoin": 'bevel',"stroke-opacity": '1',"font-family": 'Lucida Grande',"stroke-miterlimit": '4',"stroke-dasharray": 'none'}).transform("t0,-62.362183")
+	.data({'id':'barabai','daerah':'Barabai','kabupaten':'Hulu Sungai Tengah'});
 daerah.push(barabai)
 
 // paringin
@@ -94,3 +95,5 @@ for (var i = 0; i < daerah.length; i++) {
     	console.log(this.data('id'))
     })
 }
+
+

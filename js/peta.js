@@ -59,7 +59,7 @@ daerah.push(kandangan)
 
 // amuntai
 var amuntai = rsr.path("m 350.03547,468.03861 1.84298,4.68877 -12.36057,10.70765 -14.43234,8.22981 -10.3397,2.72823 -20.49511,-1.23543 -42.98565,-17.32708 -11.52806,2.30752 -10.51765,7.12531 -8.47128,-1.86396 -5.64331,3.7959 -2.12892,-2.23381 1.86836,-5.29631 -2.12257,-7.33057 3.14574,-4.20386 8.57297,-2.57255 6.71097,4.93788 13.17405,-2.97353 4.31509,-6.29342 9.12583,-5.04084 5.0523,-16.91209 29.94506,-22.83818 13.54263,11.1938 19.15421,9.47857 27.15516,-3.2525 -5.97375,5.56259 -5.65602,0.49568 -0.96596,11.40035 6.43767,5.45581 0.11449,5.75135 3.46348,5.51491").attr({id: 'path164',parent: 'layer1',"font-size": '54.16669845999999922px',"font-style": 'normal',"font-weight": '400',fill: '#fefee9',"fill-opacity": '1',"fill-rule": 'evenodd',stroke: '#000000',"stroke-width": '1',"stroke-linecap": 'square',"stroke-linejoin": 'bevel',"stroke-opacity": '1',"font-family": 'Lucida Grande',"stroke-miterlimit": '4',"stroke-dasharray": 'none'}).transform("t0,-62.362183")
-	.data({'id':'amintai','daerah':'Amuntai','kabupaten':'Hulu Sungai Utara'});
+	.data({'id':'amuntai','daerah':'Amuntai','kabupaten':'Hulu Sungai Utara'});
 daerah.push(amuntai)
 
 // barabai
@@ -84,16 +84,28 @@ daerah.push(tanjung)
 
 layer1.attr({'id': 'layer1','name': 'layer1'});layer1.transform("t0,-62.362183");
 
-for (var i = 0; i < daerah.length; i++) {
 
-	// Change Yorkshire's fill colour to gold
-    if (daerah[i].data('id') == 'banjarmasin') {
-    	daerah[i].node.setAttribute('fill', 'gold');
-    }
+// data kota terinfeksi
+var data = ['banjarmasin', 'banjarbaru', 'amuntai'];
 
-    daerah[i].mouseover(function(e){
-    	console.log(this.data('id'))
-    })
+
+function warnaDaerah(data, warna){
+	for (var i = 0; i < daerah.length; i++) {
+
+		for (var d = 0; d < data.length; d++) {
+			if (daerah[i].data('id') == data[d]) {
+		    	daerah[i].node.setAttribute('fill', warna);
+		    }
+		};
+	    daerah[i].mouseover(function(e){
+	    	console.log(this.data('id'))
+	    })
+	}
 }
+
+warnaDaerah(data,'red');
+
+
+
 
 

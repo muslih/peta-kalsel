@@ -1,0 +1,56 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 93.75%;
+	margin:0px;
+}
+
+.bungkus {
+	border: solid 2px #444;
+	padding: 20px;
+	margin: 20px;
+}
+
+.bungkus h1{
+	margin:0px;
+}
+
+
+[class*="warna"]{
+	width:30px;
+	height: 15px;
+	background: #eee;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 10px;
+
+}
+#keterangan{
+	display: block;
+	overflow: hidden;
+	font-family: arial;
+	font-size: 12px;
+
+	position: fixed;
+	top: 100px;
+	right: 150px;
+}
+
+#keterangan h2{
+	margin-bottom: 5px;
+}
+
+#keterangan .daerah{font-size: 14px}
+.warna0 {
+	background: #b9b9b9;
+}
+
+.warna2 {background: #ffa4a9;}
+
+.warna3 {background: #cc6674;}
+
+.warna4 {background: #993341;}
+
+.warna5 {background: #66000e;}

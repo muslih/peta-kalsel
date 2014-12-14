@@ -16,6 +16,10 @@ function kehex(rgb) {
 
 // deklarasi  variable peta
 warna1 = kehex($('.warna1').css('backgroundColor'))
+warna2 = kehex($('.warna2').css('backgroundColor'))
+warna3 = kehex($('.warna3').css('backgroundColor'))
+warna4 = kehex($('.warna4').css('backgroundColor'))
+warna5 = kehex($('.warna5').css('backgroundColor'))
 
 
 var $map = $('#peta');
@@ -101,7 +105,8 @@ layer1.attr({'id': 'layer1','name': 'layer1'});layer1.transform("t0,-62.362183")
 
 
 // data kota terinfeksi
-var data = ['kandangan', 'barabai', 'amuntai','marabahan'];
+var data2 = ['kandangan', 'barabai', 'amuntai','marabahan'];
+var data3 = ['rantau', 'martapura','banjarbaru']
 
 // fungsi warna acak
 function warnaAcak() {
@@ -117,11 +122,11 @@ function warnaAcak() {
 function warnaDaerah(data, warna ){
 	for (var i = 0; i < daerah.length; i++) {
 
-		daerah[i].node.setAttribute('fill','#eee');
+		// daerah[i].node.setAttribute('fill','#eee');
 		for (var d = 0; d < data.length; d++) {
 			if (daerah[i].data('id') == data[d]) {
-		    	daerah[i].node.setAttribute('fill','#ffa4a9');
-		    	daerah[i].node.setAttribute('opacity', '1');
+		    	daerah[i].node.setAttribute('fill',warna);
+		    	// daerah[i].node.setAttribute('opacity', '1');
 		    	// daerah[i].glow()
 		    }
 		};
@@ -141,7 +146,9 @@ function warnaDaerah(data, warna ){
 }
 
 // eksekusi fungsi
-warnaDaerah(data,warnaAcak());
+warnaDaerah(data2,warna2);
+
+warnaDaerah(data3,warna3);
 
 
 

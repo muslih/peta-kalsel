@@ -86,15 +86,27 @@ layer1.attr({'id': 'layer1','name': 'layer1'});layer1.transform("t0,-62.362183")
 
 
 // data kota terinfeksi
-var data = ['banjarmasin', 'banjarbaru', 'amuntai'];
+var data = ['kandangan', 'barabai', 'amuntai','marabahan'];
 
+// fungsi warna acak
+function warnaAcak() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
-function warnaDaerah(data, warna){
+// fungsi warna daerah
+function warnaDaerah(data, warna ){
 	for (var i = 0; i < daerah.length; i++) {
 
 		for (var d = 0; d < data.length; d++) {
 			if (daerah[i].data('id') == data[d]) {
-		    	daerah[i].node.setAttribute('fill', warna);
+		    	daerah[i].node.setAttribute('fill',warna);
+		    	daerah[i].node.setAttribute('opacity', '0.5');
+		    	// daerah[i].glow()
 		    }
 		};
 	    daerah[i].mouseover(function(e){
@@ -103,7 +115,8 @@ function warnaDaerah(data, warna){
 	}
 }
 
-warnaDaerah(data,'red');
+// eksekusi fungsi
+warnaDaerah(data,warnaAcak());
 
 
 

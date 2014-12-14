@@ -4,11 +4,26 @@ var rsr = Raphael('peta', '765', '990');
 // buat bariabel berisi array daerah-daerah di banjarmasin
 var daerah =[];
 
-// deklarasi  variable
-var $map = $('#peta');
-// deklarasi 
-var $infobox = $('.infobox');
 
+// deklarasi fungsi konversi ke hex dari rgb
+function kehex(rgb) {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    function hex(x) {
+        return ("0" + parseInt(x).toString(16)).slice(-2);
+    }
+    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
+
+// deklarasi  variable peta
+warna1 = kehex($('.warna1').css('backgroundColor'))
+
+
+var $map = $('#peta');
+
+// deklarasi variable warna
+
+
+// set canvas
 var layer1 = rsr.set();
 
 // banjarmasin
@@ -102,14 +117,24 @@ function warnaAcak() {
 function warnaDaerah(data, warna ){
 	for (var i = 0; i < daerah.length; i++) {
 
+		daerah[i].node.setAttribute('fill','#eee');
 		for (var d = 0; d < data.length; d++) {
 			if (daerah[i].data('id') == data[d]) {
-		    	daerah[i].node.setAttribute('fill',warna);
-		    	daerah[i].node.setAttribute('opacity', '0.5');
+		    	daerah[i].node.setAttribute('fill','#ffa4a9');
+		    	daerah[i].node.setAttribute('opacity', '1');
 		    	// daerah[i].glow()
 		    }
 		};
+
+		// fungsi hover daerah
 	    daerah[i].mouseover(function(e){
+	    	$('#keterangan .daerah').text(this.data('daerah'))
+	    	console.log(this.data('id'))
+	    })
+	    
+	    // fungsi mouse out daerah
+	    daerah[i].mouseout(function(e){
+	    	$('#keterangan .daerah').text('----')
 	    	console.log(this.data('id'))
 	    })
 	}

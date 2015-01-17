@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Peta Kalimantan Selatan</title>
-		<script type="text/javascript" src="./js/jquery.js"></script>
+		
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
@@ -42,7 +42,7 @@
 					<span>51 - 100</span>
 				</p>
 			</div>
-		</div>
+				</div>
 		<section class="bungkus">
 			<div id="head">
 				<h1>PEMERINTAH PROVINSI KALIMANTAN SELATAN DINAS PETERNAKAN</h1>
@@ -78,7 +78,17 @@
 				</p>
 			</aside>
 		</section>
-		<script src="./js/raphael.js"></script>
-		<script src="./js/peta.js"></script>
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/raphael.js"></script>
+		<script type="text/javascript" src="./js/peta.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var data2 = [{'daerah':'kandangan','jumlah':'35'}, {'daerah':'barabai','jumlah':'50'},{'daerah':'amuntai','jumlah':'90'},{'daerah':'marabahan','jumlah':'10'}]
+			var data3 = [{'daerah':'rantau','jumlah':'35'}, {'daerah':'martapura','jumlah':'50'},{'daerah':'banjarbaru','jumlah':'90'}];
+			warnaDaerah(data2,warna2);
+			warnaDaerah(data3,warna3);
+		});
+		</script>
+
 	</body>
 </html>

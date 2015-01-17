@@ -196,8 +196,8 @@ function warnaDaerah(data, warna ){
 // });
 
 // eksekusi fungsi
-warnaDaerah(data2,warna2);
-warnaDaerah(data3,warna3);
+// warnaDaerah(data2,warna2);
+// warnaDaerah(data3,warna3);
 
 
 

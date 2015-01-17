@@ -71,7 +71,9 @@ body {
 }
 
 .infobox__title{
+	position: absolute;
 	bottom:0;
+	right: 100%;
 }
 .batang {
 	width: 5px;
@@ -79,7 +81,7 @@ body {
 	background: orange;
 	margin-left:3px;
 	position: absolute;
-	top: -16px;
-	right: -8px;
+	bottom: 0px;
+	/*right: -8px;*/
 	/*display: block;*/
 }

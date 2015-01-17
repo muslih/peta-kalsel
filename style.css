@@ -54,3 +54,35 @@ body {
 .warna4 {background: #993341;}
 
 .warna5 {background: #66000e;}
+
+.kotak {
+	width: 200px;
+	height: auto;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	border: solid 2px red;
+	background-color: #EEE;
+}
+.infobox__close {
+	width: 22px;
+	height: 24px;
+	padding: 5px;
+	font-size: 1em;
+	line-height: 0.9333333333em;
+	color: red;
+	background-color: white;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	text-decoration: none;
+	display: block;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+	border: solid 1px red;
+}

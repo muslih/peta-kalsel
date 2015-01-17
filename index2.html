@@ -4,20 +4,25 @@
 		<meta charset="UTF-8">
 		<title>Peta Kalimantan Selatan</title>
 		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script src="./js/raphael.js"></script>
+		<script src="./js/kartograph.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
 		<div class="bungkus">
-			<div class="daerah">Nama Daerah</div>
+			<div id="feta"></div>
+		</div>
+		<div class="bungkus">
 			<h1>Peta Kematian Ternak Sapi Kalimantan Selatan</h1>
 			<div id="peta" class="kalimantan-selatan">
 				<!-- Raphaël JS Map Here -->
 			</div>
 			<h3 id="region-name"></h3>
-		<div class="kotak">
-			<span class="infobox__title">Region name</span>
-			<a href="#" class="infobox__close">X</a>
-		</div>
+
+			<div class="kotak">
+				<span class="infobox__title">Region name</span>
+				<a href="#" class="infobox__close">X</a>
+			</div>
 
 			<div id="keterangan">
 				<h2>Nama Daerah</h2>
@@ -47,7 +52,19 @@
 				</p>
 			</div>
 		</div>
-		<script src="./js/raphael.js"></script>
-		<script src="./js/peta.js"></script>
+		
+		<script language="JavaScript">
+			var map = $K.map('#feta',100,1000);
+			map.loadMap('usa.svg',function(){
+				map.addLayer('mylayer');
+				map.addLayer('mylayer1');
+				map.addLayer('mylayer2');
+				map.addLayer('mylayer3');
+				map.addLayer('mylayer4');
+				map.addLayer('mylayer5');
+				map.addLayer('mylayer6');
+			});
+
+		</script>
 	</body>
 </html>

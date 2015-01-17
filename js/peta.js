@@ -23,7 +23,7 @@ warna5 = kehex($('.warna5').css('backgroundColor'))
 
 
 var $map = $('#peta');
-
+var $kotak = $('.kotak');
 // deklarasi variable warna
 
 
@@ -134,6 +134,7 @@ function warnaDaerah(data, warna ){
 		// fungsi hover daerah
 	    daerah[i].mouseover(function(e){
 	    	$('#keterangan .daerah').text(this.data('daerah'))
+	    	console.log(e)
 	    	// console.log(this.data('id'))
 	    })
 	    
@@ -142,6 +143,31 @@ function warnaDaerah(data, warna ){
 	    	$('#keterangan .daerah').text('----')
 	    	// console.log(this.data('id'))
 	    })
+
+	    // fungsi ambil koordinat daerah
+	    daerah[i].mousedown(function(e){
+
+			var posx;
+			var posy;
+
+			if (typeof e !== 'undefined') {
+				posx = e.pageX - $map.offset().left ;
+				posy = e.pageY - $map.offset().top;
+			} else {
+				// console.log(building);
+				posx = parseInt(daerah[i].getBBox().x, 10) - 260;
+				posy = parseInt(daerah[i].getBBox().y, 10) - 57;
+			}
+
+			console.log(posx, posy);
+
+			$kotak.css({
+				'top': posy + 'px',
+				'left': posx + 'px'
+			});
+
+			$kotak.find('.infobox__title').text(this.data('daerah'));
+		});
 	}
 }
 

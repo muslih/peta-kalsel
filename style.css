@@ -54,3 +54,32 @@ body {
 .warna4 {background: #993341;}
 
 .warna5 {background: #66000e;}
+
+.kotak, .batang{
+	position:absolute;
+}
+
+.kotak {
+	top: -9999px;
+	left: -9999px;
+	/*border: solid 2px red;*/
+	/*background-color: #EEE;*/
+	font-size: 9px;
+	vertical-align: bottom;
+	height: 25px;
+
+}
+
+.infobox__title{
+	bottom:0;
+}
+.batang {
+	width: 5px;
+	height: 100%;
+	background: orange;
+	margin-left:3px;
+	position: absolute;
+	top: -16px;
+	right: -8px;
+	/*display: block;*/
+}

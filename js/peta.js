@@ -1,3 +1,15 @@
+// *****Testing 
+
+// $(function(){
+	// function panggil(){
+	// 	alert('memanggil fungsi!');
+	// }
+
+// })
+// panggil()
+// 	panggil = function(){
+// 	alert('Memanggil fun')
+// }
 
 var rsr = Raphael('peta', '765', '990');
 
@@ -10,9 +22,6 @@ var $map = $('#peta');
 
 // deklarasi kotak
 var $kotak = $('.kotak')
-
-
-// deklarasi variable warna
 
 
 // set canvas
@@ -92,13 +101,6 @@ daerah.push(tanjung)
 
 layer1.attr({'id': 'layer1','name': 'layer1'});layer1.transform("t0,-62.362183");
 
-
-// data kota terinfeksi
-// var data2 = ['kandangan', 'barabai', 'amuntai','marabahan'];
-var data2 = [{'daerah':'kandangan','jumlah':'35'}, {'daerah':'barabai','jumlah':'50'},{'daerah':'amuntai','jumlah':'90'},{'daerah':'marabahan','jumlah':'10'}]
-var data3 = [{'daerah':'rantau','jumlah':'35'}, {'daerah':'martapura','jumlah':'50'},{'daerah':'banjarbaru','jumlah':'90'}];
-
-
 // fungsi warna acak
 function warnaAcak() {
     var letters = '0123456789ABCDEF'.split('');
@@ -118,12 +120,6 @@ function kehex(rgb) {
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 
-// deklarasi  variable peta
-warna1 = kehex($('.warna1').css('backgroundColor'))
-warna2 = kehex($('.warna2').css('backgroundColor'))
-warna3 = kehex($('.warna3').css('backgroundColor'))
-warna4 = kehex($('.warna4').css('backgroundColor'))
-warna5 = kehex($('.warna5').css('backgroundColor'))
 
 // munculkan nama daerah
 for (var i = 0; i < daerah.length; i++) {
@@ -131,7 +127,7 @@ for (var i = 0; i < daerah.length; i++) {
 }
 
 // fungsi warna daerah
-function warnaDaerah(data, warna ){
+function warnaDaerah(data,warna){
 	// looping jumlah daerah
 	for (var i = 0; i < daerah.length; i++) {
 
@@ -141,7 +137,7 @@ function warnaDaerah(data, warna ){
 		    	daerah[i].node.setAttribute('fill',warna);
 		    	// daerah[i].node.setAttribute('opacity', '1');
 		    	// daerah[i].glow()
-		    	$('.kotak#'+data[d].daerah).find('.batang').css('height',data[d].jumlah+'%')
+		    	$('.kotak#'+data[d].daerah).find('.batang').css('height',data[d].jumlah+'%');
 		    }
 		};
 
@@ -149,38 +145,6 @@ function warnaDaerah(data, warna ){
 		// fungsi hover daerah
 	    daerah[i].mouseover(function(e){
 	    	$('#keterangan .daerah').text(this.data('daerah'))
-	    	// console.log(this.data('id'))
-
-			// deklarasi kordinat
-	    	// var bbox = this.getBBox();
-	    	// var text = rsr.text(bbox.x + bbox.width/2, bbox.y + bbox.height/2, this.data('daerah'))
-
-	    	// var text = rsr.text(this.data('a'), this.data('b'), this.data('daerah'))
-
-	    	var posx;
-			var posy;
-
-			if (typeof e !== 'undefined') {
-				// posx = e.pageX - $map.offset().left - 270;
-				// posy = e.pageY - $map.offset().top - 67;
-				posx = e.pageX //- $map.offset().left;
-				posy = e.pageY //- $map.offset().top;
-			} else {
-				// console.log(building);
-				posx = parseInt(daerah[i].getBBox().x, 10) - 260;
-				posy = parseInt(daerah[i].getBBox().y, 10) - 57;
-				// posx = parseInt(daerah[i].getBBox().x);
-				// posy = parseInt(daerah[i].getBBox().y);
-			}
-
-			// console.log(posx, posy);
-
-			// $kotak.css({
-			// 	'top': this.data('y') + 'px',
-			// 	'left': this.data('x') + 'px'
-			// });
-
-			// $kotak.find('.infobox__title').text(this.data('daerah'));
 	    })
 	    
 	    // fungsi mouse out daerah
@@ -190,6 +154,8 @@ function warnaDaerah(data, warna ){
 	    })
 	}
 }
+
+
 
 // $(document).mousemove(function(event){ 
 //     $(".koord").text("X: " + event.pageX + ", Y: " + event.pageY); 
